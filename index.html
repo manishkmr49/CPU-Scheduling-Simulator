@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPU Scheduling</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <!-- Start - Splash Animation -->
+  <div class="splash-screen" id="splashScreen">
+    <div class="splash-content">
+      <script
+        src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+        type="module"
+      ></script>
+      <dotlottie-player
+        src="https://lottie.host/1ddf984b-7523-4baf-9015-a04b667a4030/pCYVGqAZRv.json"
+        background="transparent"
+        speed="1.5"
+        style="width: 400px; height: 400px"
+        loop
+        autoplay
+      ></dotlottie-player>
+      <p style="font-family: cursive; font-size: 1rem">The Creator : Manish</p>
+    </div>
+  </div>
+  <!-- End - Splash Animation -->
+  <div class="main-content" id="mainContent">
+    <!-- Start - Form -->
+    <div class="input-container">
+      <h2>Input</h2>
+      <br>
+      <label>Algorithm</label>
+      <select id="algorithm">
+        <option value="FCFS">First Come First Serve (FCFS)</option>
+        <option value="SJF">Shortest Job First (SJF)</option>
+        <option value="SRTF">Shortest Remaining Time First (SRTF)</option>
+        <option value="RR">Round Robin (RR)</option>
+      </select>
+      <br>
+      <label>Arrival Time</label>
+      <input type="text" id="arrivalTime" placeholder="i.e.1 2 3 4" />
+      <br>
+      <label>Burst Time</label>
+      <input type="text" id="burstTime" placeholder="i.e.1 2 3 4" />
+      <button onclick="solve()">Solve</button>
+    </div>
+
+    <div class="output-container">
+      <h2>Output</h2>
+      <div id="output" class="table-container"></div>
+    </div>
+
+    <!-- End - Form -->
+  </div>
+  
+  <!-- GitHub link with styled button -->
+  <div style="text-align: center; margin-top: 20px;">
+    <a class="github-link" href="https://github.com/manishkmr49/CPU-Scheduling-Simulator" target="_blank">
+      <img src="https://github.com/fluidicon.png" alt="GitHub" width="30" height="30">Visit GitHub Repository
+    </a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
